@@ -1,0 +1,21 @@
+npm init --> for installing package.json
+package.json me script me start k andar node server.js likhne se bas npm start karna hota h
+phir express download krne k lye npm ki website par jakr express search krna jo instructions likhe hain unhe follow krna 
+
+lec2: package.json me jakr type ko module kar do to use jaise react me import statements hote the import __ from __ vaise wale use kr skte hain hme const __ = require('') use nhi krna padega
+
+mongodb setup:
+create account
+create free cluster 
+copy username and password: 66ZolJI6DPWhC0q8 budubudusheikh
+connection method select kro mongosb compass
+link ko mongoURL kakrke dotenv me copy paste kr do, also dont forget to write database name after adddress
+in mongodb atlas also whitelist your ip address by creating a new ip address 0.0.0.0/0 (this ip address can be accessed from anywhere)
+
+bcrypt ka use kiya hai password hashing salting aur compare karne k lye mainly registration purpose
+jwt ka use krenge login aur session k lye 
+
+how to use jwt:
+install and import jwt in auth controller
+create a secret key in .env file
+now create routes in authroutes
