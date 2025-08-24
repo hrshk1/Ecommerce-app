@@ -1,0 +1,4 @@
+create react app using npx
+use index.css for global styling and app.css for componenet designing 
+install bootstrap in index.html
+import google fonts in index.css
