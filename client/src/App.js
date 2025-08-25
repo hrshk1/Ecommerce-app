@@ -1,14 +1,26 @@
 import logo from './logo.svg';
-import './App.css';
-import Layout from './components/Layout/Layout.js';
+import {Routes,Route} from 'react-router-dom'
+// Routes is the list of all the possible routes
+// Route is used for checking the url
+import HomePage from './pages/HomePage';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Policy from './pages/Policy';
+import Pagenotfound from './pages/Pagenotfound';
+
 
 function App() {
   return (
     <>
-      <Layout>
-      <h1> Ecommerce App </h1>
-      </Layout>
-      {/* when you wrap things inside layout they will be passed as props.children in layout */}
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/Policy' element={<Policy/>}/>
+        <Route path='*' element={<Pagenotfound/>}/>
+        {/* Here * means that whenever anything except for mentioned routed are called this page not found will be displayed */}
+        
+      </Routes>
     </>
   );
 }
