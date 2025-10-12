@@ -1,0 +1,13 @@
+.pnf {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 100vh;            /* full screen height */
+  margin: 0;
+}
+
+.pnf h1, 
+.pnf h3 {
+  display: block;          /* ensure block layout */
+  margin: 10px 0;
+}

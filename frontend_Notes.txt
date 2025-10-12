@@ -2,3 +2,57 @@ create react app using npx
 use index.css for global styling and app.css for componenet designing 
 install bootstrap in index.html
 import google fonts in index.css
+
+
+//Process of adding routes:
+install in terminal 
+import browser routes in index.js and wrap app in index.js with browser routes
+import routes and route in app.js and create route and routes
+use link tag to create links to reach that route
+
+
+//Layout mapping
+we have created header and footer in components
+we'll import and use them in Layout
+in layout we have destructed props as childrens and kept it in middle so that whichever page we wrap with layout, particularly its contents lie in the middle of header and footer
+
+
+//navbar
+go to bootstarp search for navbar, choose any, here we are choosing responsive behaviours toggles
+paste the code in header and select the code and right click and set change from html to jsx
+
+//icon adding
+npm i react-icons
+then go to react icons on github page 
+search for icons 
+find code and copy paste it
+
+//SEO in react app
+since react makes a single page application so ranking on search engines is not possible in react itself 
+for that we use react-helmet 
+
+axios: Axios is a promise-based HTTP client library used in React applications to make asynchronous HTTP requests, such as GET, POST, PUT, and DELETE, to APIs or servers for data fetching, submission, and manipulation
+basically used in frontend side to connect frontend and backend
+
+//React-toastify: to show messages and notification
+install npm package
+include toastify container in app.js or index.js or in any root file like here included in layout.js
+include toast in the page in which u want to show the notification
+you can use syntaxes like these in functions to show messages only at a particular time ---> toast.success('Registration successfull')
+
+//.env in frontend
+all information regarding backend server will be stored in .env 
+make sure to craete .env in root folder
+
+//Concurrently and cors 
+to run two servers of frontend and backend simultaneously we need to download this Concurrently
+cors is used to avoid any cross origin resource sharing
+The cors package in Node.js is a middleware for Express (and Connect) that enables Cross-Origin Resource Sharing (CORS). CORS is a security feature implemented by browsers to control how web applications running on one origin (domain, protocol, or port) can request resources from a different origin.
+**Note: these two have to be installed in node's root folder
+import cors in node js server.js
+and use it as middleware
+now go to package json of node and in script write script for client with a prefix since frontend is in different folder and then use concurrently script given on npm website 
+
+//Main part of connecting frontend and backend
+const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`,{name,email,password,Address})
+the first argument of axios is the address of the route and second argument is the object containing the list of variables. This second argument will be sent as req.body in the register controller, where we'll destructure it.

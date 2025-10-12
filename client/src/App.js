@@ -7,12 +7,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Policy from './pages/Policy';
 import Pagenotfound from './pages/Pagenotfound';
+import Register from './pages/Auth/Register';
 
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path='/Register' element={<Register/>}/>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>

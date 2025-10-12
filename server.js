@@ -4,8 +4,7 @@ import colors from 'colors'
 import connectDB from './config/db.js'
 import morgan from 'morgan'
 import authRoutes from './routes/authroutes.js'
-
-
+import cors from 'cors'
 //configure the dotenv file
 dotenv.config()
 //if .env is in some other folder then you have to write path as object inside config
@@ -17,9 +16,10 @@ connectDB();
 
 //rest object 
 const app = express();
-
-//middleware:
 app.use(express.json()) //body-parser
+//middleware:
+app.use(cors());
+
 app.use(morgan('dev'))
 
 
