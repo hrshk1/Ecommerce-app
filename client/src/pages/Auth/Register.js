@@ -3,6 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from 'react-hot-toast';
+import '../../styles/Authstyle.css'
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,10 +33,10 @@ const Register = () => {
     // in authcontroller.js, registercontroller function there is a return response option, which sends response and is stored in res data which can be recieved using res.data
   };
   return (
-    <Layout>
-      <div className="register">
-        <h3>Register Page</h3>
+    <Layout title = "Register - Ecommerce App">
+      <div className="form-container">
         <form onSubmit={handleSubmit}>
+          <h4 className="title">REGISTER FORM</h4>
           <div className="mb-3">
             <input
               type="text"
